@@ -76,6 +76,11 @@ body {
     background-color: #DF811B;
 }
 
+
+.tensao-bar {
+    background-color: #77d9;
+}
+
 .bar-container button {
     background: none;
     border: none;
