@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinny</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Foto do Personagem -->
+        <div class="character-image">
+            <img src="img/vinny.jpg" alt="Foto do Personagem">
+        </div>
+
+        <!-- Nome e Idade Pré-definidos -->
+        <div class="character-info">
+            <p><strong>Nome:</strong> <span id="character-name">Vinny </span></p>
+            <p><strong>Idade:</strong> <span id="character-age">19</span></p>
+        </div>
+
+        <!-- Perícias -->
+        <div class="skills">
+            <h3>Perícias</h3>
+            <ul>
+                <li>FOR</li>
+                <li>AGL</li>
+                <!-- Adicione mais perícias conforme necessário -->
+            </ul>
+        </div>
+
+        <!-- Arquétipo -->
+        <div class="archetype">
+            <h3>Arquétipo</h3>
+            <p>Atleta</p>
+        </div>
+
+        <!-- Barras de Vida e Sanidade -->
+        <div class="stats">
+            <h3>Estatísticas</h3>
+            <div class="stat-bar">
+                <strong>VIDA:</strong>
+                <div class="bar-container red-bar">
+                    <button class="decrement" onclick="updateStat('hp-current', -5)">&#xab;</button>
+                    <button class="decrement-small" onclick="updateStat('hp-current', -1)">&#x2039;</button>
+                    <span id="hp-current">0</span>/<span id="hp-max">0</span>
+                    <button class="increment-small" onclick="updateStat('hp-current', 1)">&#x203a;</button>
+                    <button class="increment" onclick="updateStat('hp-current', 5)">&#xbb;</button>
+                </div>
+            </div>
+            <div class="stat-bar">
+                <strong>SANIDADE:</strong>
+                <div class="bar-container purple-bar">
+                    <button class="decrement" onclick="updateStat('sanity-current', -5)">&#xab;</button>
+                    <button class="decrement-small" onclick="updateStat('sanity-current', -1)">&#x2039;</button>
+                    <span id="sanity-current">0</span>/<span id="sanity-max">0</span>
+                    <button class="increment-small" onclick="updateStat('sanity-current', 1)">&#x203a;</button>
+                    <button class="increment" onclick="updateStat('sanity-current', 5)">&#xbb;</button>
+                </div>
+            </div>
+            <div class="stat-bar">
+                <strong>Pontos de Shot:</strong>
+                <div class="bar-container green-bar">
+                    <button class="decrement" onclick="updateStat('shot-current', -5)">&#xab;</button>
+                    <button class="decrement-small" onclick="updateStat('shot-current', -1)">&#x2039;</button>
+                    <span id="shot-current">0</span>/<span id="shot-max">6</span>
+                    <button class="increment-small" onclick="updateStat('shot-current', 1)">&#x203a;</button>
+                    <button class="increment" onclick="updateStat('shot-current', 5)">&#xbb;</button>
+                </div>
+            </div>            
+        </div>
+
+        <!-- Habilidades -->
+        <div class="abilities">
+            <h3>Habilidades</h3>
+            <ul>
+                <li class="ability" onclick="toggleAbility(this)">
+                    <span class="ability-name">SEMPRE ME SURPRENDO</span>
+                    <div class="ability-description">Uma vez por encontro, você pode recusar a aumentar seu nível de sequela ao receber um ferimento.</div>
+                </li>
+                <li class="ability" onclick="toggleAbility(this)">
+                    <span class="ability-name">EU QUE MANDO AQUI</span>
+                    <div class="ability-description">Você sabe como se impor, e não leva desaforo para casa. Faça um teste de intimidação contra vontade do alvo. Caso passe o alvo perde -2d em um tipo de teste a sua escolha
+                    </div>
+                </li>
+                <li class="ability" onclick="toggleAbility(this)">
+                    <span class="ability-name">MELHOR AMIGO</span>
+                    <div class="ability-description">Sempre que entrar em uma cena de fuga e você estiver junto de outro personagem que esteja entre suas pessoas favoritas, vocês podem “Dar as mãos” para receber +1d nos testes de fuga. Caso vocês soltem as mãos durante a cena de fuga, ambos recebem a condição “Peso na consciência” e -2d nos testes de fuga.</div>
+                </li>
+                <!-- Adicione mais habilidades conforme necessário -->
+            </ul>
+        </div>
+        
+        <div class="character-story">
+            <h3>História</h3>
+            <p>Vinny nasceu na cidade de união dos Palmares, mas se mudou bem novo para são Luís dos quitunde. O atleta sempre praticou vôlei na escola e escolheu levar esse esporte para a vida toda. Além das atividades físicas, Vinny tem um passa tempo interessante de explorar locais por são Luís com amigos, conhecendo cada ponto da cidade.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
